@@ -4,3 +4,6 @@
 [submodule "projects/digit-classification-scratch"]
 	path = projects/digit-classification-scratch
 	url = git@github.com:justAnArthur/digit-classification-scratch.git
+[submodule "projects/simple-autoencoder"]
+	path = projects/simple-autoencoder
+	url = git@github.com:justAnArthur/simple-autoencoder.git
