@@ -1,3 +1,6 @@
 [submodule "latex"]
 	path = latex
 	url = git@github.com:justAnArthur/BP-latex.git
+[submodule "projects/digit-classification-scratch"]
+	path = projects/digit-classification-scratch
+	url = git@github.com:justAnArthur/digit-classification-scratch.git
