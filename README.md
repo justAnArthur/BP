@@ -1,4 +1,8 @@
-# Photo Restoration using Artificial Intelligence | Edge AI license plate recognition
+# Photo Restoration using Artificial Intelligence
+
+Photo restoration is a computer vision task which involves returning damaged images to their original state. Recently, artificial intelligence, specifically neural networks have revolutionized this field by delivering modern outcomes on a variety of restoration jobs, for example, deep learning-based image denoising or high resolution. These methods have the ability that can be used in numerous applications with or without being trained on a dataset.
+
+Analyze the current state of the art of photo restoration towards practical applications and in the context of artificial intelligence. Design and implement an intelligent module as the core of an intelligent application for photo processing and restoration. As a practical software development demonstration, create a docker container for your application. Select appropriate metrics to measure the results and evaluate the outcome.
 
 ## Related
 

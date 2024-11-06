@@ -1,0 +1,128 @@
+% TEMPLATE AUTHOR: https://bitbucket.org/m_by/fiit-stu-thesis-template-for-latex
+% EDIT: Jozef Gáborík
+% OVERLEAF TEMPLATE https://www.overleaf.com/latex/templates/stu-fiit-bachelor-thesis-template-slovak-university-of-technology/pppyykvvhqgq
+%
+% Customized from OVERLEAF TEMPLATE: Giang Nguyen
+% https://www.overleaf.com/read/xmtqfgjhfphj#760c57
+
+% SETTINGS - LATEX
+\newcommand{\myFontSize}[0] {11pt}
+\newcommand{\mySpacing}[0] {1.1}
+\newcommand{\myBibliography}[0] {bib/references}
+
+\documentclass[\myFontSize,a4paper,twoside,openright,english]{book}
+% \documentclass[\myFontSize,a4paper,twoside,openright,slovak]{book}
+
+% to change name, title, supervisor etc. go to preamble/preamble.tex
+\input{preamble/preamble}
+
+% GN setting begin
+% https://tug.org/FontCatalogue/
+% \usepackage{mathpazo}           % EN + math font in one
+\usepackage{newpxtext}        % slovencina, aby nerobila problem s CRZP
+% \usepackage{eulerpx}          % math font for newpxtext
+\usepackage{amsfonts, amssymb, amsmath}     % math symboly
+
+% URL without red/blue boxing
+\usepackage[hidelinks,unicode]{hyperref}
+
+% Clean the space among items
+\usepackage{etoolbox}
+\AtBeginEnvironment{itemize}{\setlength\parskip{0pt}}
+\AtBeginEnvironment{enumerate}{\setlength\parskip{0pt}}
+
+% include PDF zadanie z AISu (alebo draft PDF zadania z YonBanu)
+\usepackage{pdfpages}
+
+% Acronyms/Abbreviations in automatic way
+%\usepackage{longtable}
+\usepackage{acro}[=v2] % default is v3, and causing Overleaf timeout
+\input{appendices/abbreviation}
+% \acsetup{list-style=longtable}
+
+%pseudocode
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% various
+\usepackage{booktabs}       % nicer tables
+\usepackage{multirow}
+\usepackage{todonotes}      % todo poznamky
+
+\usepackage{pmboxdraw}      % tree drawing
+\usepackage{verbatim}       % for verbatim environment and \verbatiminput
+\usepackage{sverb}          % for \verbinput
+% GN setting end
+
+\begin{document}
+
+% Minted: insert colorful code in the manuscript
+% pygmentize -L styles
+% \usepackage[cache=false,outputdir=build]{minted}
+% \usemintedstyle{autumn}
+
+    \include{preamble/title}            % Title page
+    \include{preamble/annotation}       % Annotation
+    \include{preamble/acknowledgements} % Acknowledgements
+
+% Table of contents (TOC)
+% \setcounter{tocdepth}{2}          % show max 2+1=3 levels in TOC
+    \tableofcontents{}
+
+% References segment
+    \begin{refsegment}
+        \input{content/intro}
+        \input{content/objectives}
+        \input{content/problem-breakdown}
+        \input{content/challenges}
+        \input{content/implementation}
+        \input{content/evaluation}
+        \input{content/conclusion}
+
+        % Resume: 10% in SK if the Thesis is written in EN
+        \addcontentsline{toc}{chapter}{Resumé}
+        \input{content/resume}
+
+        % List of Abbreviations
+        \addcontentsline{toc}{chapter}{List of Abbreviations}
+        \printacronyms[name=List of Abbreviations, heading=chapter*]
+        \markboth{}{}
+
+        % List of Figures
+        \addcontentsline{toc}{chapter}{List of Figures}
+        % \renewcommand{\listfigurename}{List of figures}
+        \listoffigures
+        \markboth{}{}
+
+        % List of Tables
+        \addcontentsline{toc}{chapter}{List of Tables}
+        % \renewcommand{\listtablename}{List of tables}
+        \listoftables
+        \markboth{}{}
+
+        % List of Algorithms
+        % \addcontentsline{toc}{chapter}{List of Algorithms}
+        % \listofalgorithms
+
+        % List of Code Samples
+        % \clearpage\null
+        % \addcontentsline{toc}{chapter}{List of Code Samples}
+        % \renewcommand*{\listlistingname}{List of Code Samples}
+        % \listoflistings
+
+        % Bibliography
+        % \addcontentsline{toc}{chapter}{References}
+        \printbibliography[heading=bibintoc,
+            title=References,
+            segment=\therefsegment,
+            resetnumbers=true]
+        \markboth{}{}
+    \end{refsegment}
+
+% Appendix
+    \appendix
+    \include{appendices/digital_medium}
+% \include{appendices/appendix}
+    \include{appendices/plan}
+
+\end{document}
