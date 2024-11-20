@@ -59,5 +59,6 @@ application. Select appropriate metrics to measure the results and evaluate the 
 - Low-level device
     - https://opensource.com/article/20/11/machine-learning-bash
 - Datasets
-    - https://huggingface.co/datasets/keremberke/license-plate-object-detection
-    - https://public.roboflow.com/object-detection/license-plates-us-eu
+    - https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset
+      [//]: # (- https://huggingface.co/datasets/keremberke/license-plate-object-detection)
+      [//]: # (- https://public.roboflow.com/object-detection/license-plates-us-eu)

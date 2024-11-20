@@ -7,3 +7,6 @@
 [submodule "projects/simple-autoencoder"]
 	path = projects/simple-autoencoder
 	url = git@github.com:justAnArthur/simple-autoencoder.git
+[submodule "projects/mri-brain-denoising-nn"]
+	path = projects/mri-brain-denoising-nn
+	url = git@github.com:justAnArthur/mri-brain-denoising-nn.git
