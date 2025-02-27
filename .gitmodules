@@ -3,7 +3,7 @@
 	url = git@github.com:FIIT-Bc-projects/2024-BP-Kozubov-Photo-Restoration-AI-Latex.git
 [submodule "application"]
 	path = application
-	url = git@github.com:justAnArthur/BP-application.git
+	url = git@github.com:FIIT-Bc-projects/2024-BP-Kozubov-Photo-Restoration-WebApplication.git
 [submodule "projects/digit-classification-scratch"]
 	path = projects/digit-classification-scratch
 	url = git@github.com:justAnArthur/digit-classification-scratch.git
