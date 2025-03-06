@@ -13,3 +13,6 @@
 [submodule "projects/mri-brain-denoising-nn"]
 	path = projects/mri-brain-denoising-nn
 	url = git@github.com:justAnArthur/mri-brain-denoising-nn.git
+[submodule "projects/super-resolution-deep-cnn"]
+	path = projects/super-resolution-deep-cnn
+	url = git@github.com:justAnArthur/super-resolution-deep-cnn.git
