@@ -1,2 +1,0 @@
-GET https://api.pexels.com/v1/search?query=wild&per_page=100&page=1
-Authorization: ckzC0XZl2r3RQAyJIOfLvF8ZI32URRtGXr8px3iPXywLSOshLSW9eWrT
