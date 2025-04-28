@@ -16,6 +16,3 @@
 [submodule "projects/super-resolution-nn"]
 	path = projects/super-resolution-nn
 	url = git@github.com:FIIT-Bc-projects/2024-BP-Kozubov-Photo-Restoration-AI-ESRM.git
-[submodule "latext/.plot"]
-    path = latex/.plot
-    url = git@github.com:HarisIqbal88/PlotNeuralNet.git
