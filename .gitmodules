@@ -1,9 +1,9 @@
 [submodule "latex"]
 	path = latex
-	url = git@github.com:FIIT-Bc-projects/2024-BP-Kozubov-Photo-Restoration-AI-Latex.git
+	url = git@github.com:justAnArthur/BP-latex.git
 [submodule "application"]
 	path = application
-	url = git@github.com:FIIT-Bc-projects/2024-BP-Kozubov-Photo-Restoration-WebApplication.git
+	url = git@github.com:justAnArthur/BP-application.git
 [submodule "projects/digit-classification-scratch"]
 	path = projects/digit-classification-scratch
 	url = git@github.com:justAnArthur/digit-classification-scratch.git
@@ -15,4 +15,4 @@
 	url = git@github.com:justAnArthur/mri-brain-denoising-nn.git
 [submodule "projects/super-resolution-nn"]
 	path = projects/super-resolution-nn
-	url = git@github.com:FIIT-Bc-projects/2024-BP-Kozubov-Photo-Restoration-AI-ESRM.git
+	url = git@github.com:justAnArthur/super-resolution-deep-cnn.git
