@@ -1,64 +1,73 @@
-Photo Restoration using Artificial Intelligence
+## Annotation
 
-Photo restoration is a computer vision task which involves returning damaged images to their original state. Recently,
-artificial intelligence, specifically neural networks have revolutionized this field by delivering modern outcomes on a
-variety of restoration jobs, for example, deep learning-based image denoising or high resolution. These methods have the
-ability that can be used in numerous applications with or without being trained on a dataset.
+Photo restoration, as a computer vision field, has always required intensive manual labor
+in traditional restoration tasks, never satisfying scalability in modern applications. In
+recent years, with the rapid development of AI, especially the invention of deep learning
+methods such as CNNs and GANs, the quality of the whole restoration process has
+gone to a new level. This project aims to devise with solution in photo restoration,
+by developing a system that utilizes the advantages of AI models to enhance images
+and remove visible defects, such as noise, blur, and compression artifacts. And also
+presents dockerized solution with API and web-based application to demonstrate the
+capabilities of the model.
 
-Analyze the current state of the art of photo restoration towards practical applications and in the context of
-artificial intelligence. Design and implement an intelligent module as the core of an intelligent application for photo
-processing and restoration. As a practical software development demonstration, create a docker container for your
-application. Select appropriate metrics to measure the results and evaluate the outcome.
+Keywords: Photo Restoration, Deep Learning, Neural Networks, Image defects
 
-## Related
+## Introduction
 
-### Papers
+Introduction
+Photo restoration has always been a difficult task that demanded considerable efforts
+from experts to restore damaged or lost image details. These days, after neural networks became commonly used with deep
+learning techniques, new horizons have
+opened for this area, and a great advance has been achieved. Modern deep learning-based approaches can be fully
+automated, and they therefore present high-quality
+results and huge savings on processing time.
+Today, such approaches are already in use or are planned to be deployed in many areas where the demands on image
+reconstruction accuracy and speed are high.
+Medical imaging is one of the areas where AI-based image restoration methods are applied to clean medical images,
+allowing for better diagnosis and treatment of patients.
+For space and aerial images, superior algorithms result in sharper and more detailed
+views of the Earth’s surface for mapping, environmental monitoring, and even military
+applications.
+Image restoration technologies in the forensic and security areas help improve facial recognition and evidence analysis,
+increasing the efficiency of investigations.
+Enhanced AI will be able to be used to create more powerful visual systems for autonomous vehicles, which will provide
+more reliable recognition of objects and traffic conditions.
+In this manner, the development of artificial intelligence-based photo restoration methods has solved not only the
+problem of image restoration but also opened wide perspectives.
 
-- [Deep Learning for Image Denoising: A Survey](https://arxiv.org/abs/1912.13171)
-- [AMulti-Stage Deep-Learning-Based Vehicle and License Plate.pdf](resources%2FAMulti-Stage%20Deep-Learning-Based%20Vehicle%20and%20License%20Plate.pdf)
-- [Edge-AI-Based_Real-Time_Automated_License_Plate_Re.pdf](resources%2FEdge-AI-Based_Real-Time_Automated_License_Plate_Re.pdf)
-- [License Plate Recognition System Based on Artificial Intelligence with Different Approaches.pdf](resources%2FLicense%20Plate%20Recognition%20System%20Based%20on%20Artificial%20Intelligence%20with%20Different%20Approaches.pdf)
-- [Zamir_Restormer_Efficient_Transformer_for_High-Resolution_Image_Restoration_CVPR_2022_paper.pdf](resources%2FZamir_Restormer_Efficient_Transformer_for_High-Resolution_Image_Restoration_CVPR_2022_paper.pdf)
-- [3DPriors-Guided Diffusion for Blind Face Restoration.pdf](resources/3DPriors-Guided%20Diffusion%20for%20Blind%20Face%20Restoration.pdf)
-- [All-In-One Medical Image Restoration.pdf](resources/All-In-One%20Medical%20Image%20Restoration.pdf)
-- [AMulti-Stage Deep-Learning-Based Vehicle and License Plate.pdf](resources/AMulti-Stage%20Deep-Learning-Based%20Vehicle%20and%20License%20Plate.pdf)
-- [BLIND CONTRAST ENHANCEMENT ASSESSMENT BY GRADIENTRATIOING AT VISIBLE EDGES.pdf](resources/BLIND%20CONTRAST%20ENHANCEMENT%20ASSESSMENT%20BY%20GRADIENTRATIOING%20AT%20VISIBLE%20EDGES.pdf)
-- [BookWithSatellite Image Enhancement and Restoration.pdf](resources/BookWithSatellite%20Image%20Enhancement%20and%20Restoration.pdf)
-- [Conformer and Blind Noisy Students for Improved Image Quality Assessment.pdf](resources/Conformer%20and%20Blind%20Noisy%20Students%20for%20Improved%20Image%20Quality%20Assessment.pdf)
-- [Deep Image Prior.pdf](resources/Deep%20Image%20Prior.pdf)
-- [Deep Plug-and-Play Prior for Hyperspectral Image Restoration.pdf](resources/Deep%20Plug-and-Play%20Prior%20for%20Hyperspectral%20Image%20Restoration.pdf)
-- [DeepLearning-Based Noise TypeClassification and Removalfor Drone.pdf](resources/DeepLearning-Based%20Noise%20TypeClassification%20and%20Removalfor%20Drone.pdf)
-- [DiffBIR Toward Blind Image Restoration.pdf](resources/DiffBIR%20Toward%20Blind%20Image%20Restoration.pdf)
-- [Edge-AI-Based_Real-Time_Automated_License_Plate_Re.pdf](resources/Edge-AI-Based_Real-Time_Automated_License_Plate_Re.pdf)
-- [Equivalent_Transformation_and_Dual_Stream_Network_Construction_for_Mobile_Image_Super-Resolution.pdf](resources/Equivalent_Transformation_and_Dual_Stream_Network_Construction_for_Mobile_Image_Super-Resolution.pdf)
-- [INSTANTIR_BLIND_IMAGE_RESTORATION_WITH_INSTANT_GENERATIVE_REFERENCE.pdf](resources/INSTANTIR_BLIND_IMAGE_RESTORATION_WITH_INSTANT_GENERATIVE_REFERENCE.pdf)
-- [Joint Face Image Restoration and Frontalization.pdf](resources/Joint%20Face%20Image%20Restoration%20and%20Frontalization.pdf)
-- [License Plate Recognition System Based on Artificial Intelligence with Different Approaches.pdf](resources/License%20Plate%20Recognition%20System%20Based%20on%20Artificial%20Intelligence%20with%20Different%20Approaches.pdf)
-- [Noise2Noise Learning Image Restoration without Clean Data.pdf](resources/Noise2Noise%20Learning%20Image%20Restoration%20without%20Clean%20Data.pdf)
-- [Restore Anything with Masks Leveraging Mask.pdf](resources/Restore%20Anything%20with%20Masks%20Leveraging%20Mask.pdf)
-- [Taming Generative Diffusion Prior for Universal Blind.pdf](resources/Taming%20Generative%20Diffusion%20Prior%20for%20Universal%20Blind.pdf)
-- [Zamir_Restormer_Efficient_Transformer_for_High-Resolution_Image_Restoration_CVPR_2022_paper.pdf](resources/Zamir_Restormer_Efficient_Transformer_for_High-Resolution_Image_Restoration_CVPR_2022_paper.pdf)
+## Project structure
 
-### Projects
+```
+├── application/                                <-- Full-stack application source code folder, divided into modules
+│   ├── apps/                                   
+│   │   ├── defects-applying/                   <-- Python module for applying defects to images
+│   │   └── web/                                <-- Next.js front-end application
+│   ├── models/
+│   │   └── Real-ESRGAN_x4plus-finetuned/       <-- Python module for hoisting the fine-tuned model 
+│   │       ├── models/
+│   │       │   ├─ net_g_latest_*.pth*          <-- Fine-tuned model weights in PyTorch format
+│   │       │   └─ net_g_latest_*.bin*/.param*  <-- Fine-tuned model weights in NCNN format
+│   │       ├── realesrgan-ncnn-vulkan*         <-- Linux executable for running the model
+│   │       └── realesrgan-ncnn-vulkan.exe*     <-- Windows executable for running the model
+│   ├── docker-compose.yml*                     <-- Docker Compose file for running the application
+├── latex/                                      <-- LaTeX files for the paper with all assets and scripts for draws
+├── projects/
+│   ├── denoising/                              <-- Several projects for learning and practice in image restoration
+│   ├── digit-classification-scratch/           <-- .
+│   ├── mnist-denoising/                        <-- .
+│   ├── mri-brain-denoising-nn/                 <-- .
+│   ├── simple-autoencoder/                     <-- .
+│   └── super-resolution-nn/                    <-- Main codes for the image restoration model
+│       ├── degrade_image.py*                   <-- Python script for degrading images 
+│       ├── degraded_dataset.py*                <-- Dataset class that uses degradation function
+│       ├── pexels_lazy_dataset.py*             <-- Handles lazy loading of images from Pexels 
+│       ├── quality_filter.py*                  <-- Python script for filtering images based on several metrics
+│       ├── real-esrgan/                        <-- Real-ESRGAN Git submodule, fork of open-source repository
+│       ├── requirements.txt*                   <-- Python requirements file
+│       ├── v1.main.ipynb*                      <-- Jupyter notebook that was used to train the first model
+│       ├── v2.main.ipynb*                      <-- Jupyter notebook that was used to train the second model
+│       └── v3.main.ipynb*                      <-- Jupyter notebook that was used to fine-tune the final model
 
-- [Image filtering](projects/denoising)
-- [MNIST Digits classification with difference in lambda value](projects/digit-classification-scratch)
-- [MNIST autoencoder](projects/simple-autoencoder)
-- [MNIST denoising](projects/MNIST%20denoising)
-- [MRI of brain denoising](projects/MRI%20images%20denoising)
-
-### Websites
-
-- https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=license+plate+recognition+ai+edge&btnG=
-
-- Photo Restoration
-    - https://medium.com/@gokcenazakyol/how-to-restore-images-image-processing-7-cabf1186fbc5
-    - (Text) https://blog.keras.io/building-autoencoders-in-keras.html
-- Parking
-    - https://www.visitbratislava.com/informations/parking/
-- Low-level device
-    - https://opensource.com/article/20/11/machine-learning-bash
-- Datasets
-    - https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset
-      [//]: # (- https://huggingface.co/datasets/keremberke/license-plate-object-detection)
-      [//]: # (- https://public.roboflow.com/object-detection/license-plates-us-eu)
+├── datasets/
+│   ├── fine-tune/                              <-- The final dataset used for fine-tuning the Real-ESRGAN model
+```
